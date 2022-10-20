@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('html/head.html',{
+    "title":"PV Koval"
+    })
+</head>
+<body>
+<div id="main">
+
+    <header class="upper">
+        <div class="upper__form">
+            <form action="#" method="post" name="send" onsubmit="return Validate()">
+                <input id="name" placeholder="שם" name="name"  class="field" type="text" dir="rtl"  />
+                <input id="phone" placeholder="טלפון" name="phone" class="field" type="phone" dir="rtl" />
+                <input id="email" placeholder="אימייל"  name="email" class="field" type="email" dir="rtl" />
+                <input type="hidden" name="Zip" id="Zip" value="<%=zip%>" />
+                <input type="hidden" name="afid" id="afid" value="<%=afid%>" />
+                <div class="upper__form__check">
+                    <div class="upper__form__check--text">
+                        <span>אני מסכים לקבל חומר פרסומי מעת לעת. הנני מצהיר בזאת כי קראתי, הבנתי וקיבלתי את . </span>
+                        <a href="" target="_blank"> תנאי השימוש </a>
+                        <a href="" target="_blank"> | מדיניות הפרטיות ומדיניות העוגיות של החברה </a>
+                    </div>
+                    <div class="upper__form__check--icon">
+                        <span><i class="fa-duotone fa-check"></i></span>
+                    </div>
+                </div>
+                <input id="send" type="submit" name="send" value="צור קשר" />
+            </form>
+            <a href="" target="_blank">לפתיחת חשבון דמו</a>
+        </div>
+        <div class="upper__text">
+            <div class="upper__text__logo"><img src="assets/img/logo.png" alt=""></div>
+            <div class="upper__text--wrap">
+                <h1>התחילו לסחור עם<br/>זירת המסחר<br/>המובילה בישראל</h1>
+                <p>מסחר ב-CFD<br/>על סחורות, מדדים, צמדי מט"ח ומניות<br/>במערכת אחת.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="why-us">
+        <h2>
+            קולמקס מאפשרת לך לסחור במגוון<br/>
+            מכשירים פיננסים, וזאת
+            <span>
+                בפיקוח הרשות <br/>
+                 לניירות ערך
+            </span>
+        </h2>
+        <div class="why-us__blocks">
+            <div class="why-us__block">
+                <div class="why-us__block--img">
+                    <img src="assets/img/worldwide-1.png" alt="">
+                </div>
+                <h3>מסחר ממונף</h3>
+                <p>על מט”ח, סחורות, מדדים,  מניות אמריקאית, ת”א 35 ועוד</p>
+            </div>
+            <div class="why-us__block">
+                <div class="why-us__block--img">
+                    <img src="assets/img/frame-48.png" alt="">
+                </div>
+                <h3>מינימום הפקדה - $1,000</h3>
+            </div>
+            <div class="why-us__block">
+                <div class="why-us__block--img">
+                    <img src="assets/img/iskaot_Icon.png" alt="">
+                </div>
+                <h3>עסקאות שורט</h3>
+                <p>להפיק את המיטב  גם כשהשוק בירידה</p>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+<footer>
+    @@include('html/footer.html',{})
+    @@include('html/modal.html',{})
+</footer>
+@@include('html/scripts.html',{})
+
+</body>
+</html>
