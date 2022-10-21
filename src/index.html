@@ -1,124 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('html/head.html',{
-    "title":"PV Koval"
-    })
+	@@include('html/head.html',{
+	"title":"PV Koval"
+	})
 </head>
 <body>
 <div id="main">
 
-    <header class="upper">
-        <div class="upper__form">
-            <form action="#" method="post" name="send" onsubmit="return Validate()">
-                <input id="name" placeholder="שם" name="name"  class="field" type="text" dir="rtl"  />
-                <input id="phone" placeholder="טלפון" name="phone" class="field" type="phone" dir="rtl" />
-                <input id="email" placeholder="אימייל"  name="email" class="field" type="email" dir="rtl" />
-                <input type="hidden" name="Zip" id="Zip" value="<%=zip%>" />
-                <input type="hidden" name="afid" id="afid" value="<%=afid%>" />
-                <div class="upper__form__check">
-                    <div class="upper__form__check--text">
-                        <span>אני מסכים לקבל חומר פרסומי מעת לעת. הנני מצהיר בזאת כי קראתי, הבנתי וקיבלתי את . </span>
-                        <a href="" target="_blank"> תנאי השימוש </a>
-                        <a href="" target="_blank"> | מדיניות הפרטיות ומדיניות העוגיות של החברה </a>
-                    </div>
-                    <div class="upper__form__check--icon">
-                        <span><i class="fa-duotone fa-check"></i></span>
-                    </div>
-                </div>
-                <input id="send" type="submit" name="send" value="צור קשר" />
-            </form>
-            <a href="" target="_blank">לפתיחת חשבון דמו</a>
-        </div>
-        <div class="upper__text">
-            <div class="upper__text__logo"><img src="assets/img/logo.png" alt=""></div>
-            <div class="upper__text--wrap">
-                <h1>התחילו לסחור עם<br/>זירת המסחר<br/>המובילה בישראל</h1>
-                <p>מסחר ב-CFD<br/>על סחורות, מדדים, צמדי מט"ח ומניות<br/>במערכת אחת.</p>
-            </div>
-        </div>
-    </header>
+	<header class="upper" style="background-image: url(assets/img/upper-fon.png);">
+		<div class="upper__wrap">
+			<div class="upper__form">
+				<form action="#" method="post" name="send" onsubmit="return Validate()">
+					<div class="upper__form--input form-border-ok">
+						<input id="name" placeholder="שם" name="name" type="text"/>
+					</div>
 
-    <section class="why-us">
-        <h2>
-            קולמקס מאפשרת לך לסחור במגוון<br/>
-            מכשירים פיננסים, וזאת
-            <span>
+					<div class="upper__form--input form-border-ok">
+						<div class="upper__form__list" id="form_1">
+							<div class="upper__form__list--wrap">
+								<div class="upper__form__list--arrow"></div>
+								<div class="upper__form__list--text">
+									<p>+972</p><img src="assets/img/country/izrail.png" alt="Izrail">
+								</div>
+							</div>
+						</div>
+						<input id="phone" placeholder="טלפון" name="phone" type="phone"/>
+					</div>
+
+					<div class="upper__form__listAll upper__form__listAll--closed" id="form_list_1">
+						<div class="upper__form__listAll--wrap">
+							<ul>
+								<li><p>+972</p><img src="assets/img/country/izrail.png" alt="Izrail"><span>Izrail</span></li>
+								<li><p>+480</p><img src="assets/img/country/ukraine.jpg" alt="Ukraine"><span>Ukraine</span></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="upper__form--input form-border-ok">
+						<input id="email" placeholder="אימייל" name="email" type="email"/>
+					</div>
+
+					<div class="upper__form__check">
+						<div class="upper__form__check--text" dir="rtl">
+							<span>אני מסכים לקבל חומר פרסומי מעת לעת. הנני מצהיר בזאת כי קראתי, הבנתי וקיבלתי את . </span>
+							<a href="" target="_blank"> תנאי השימוש </a>
+							<a href="" target="_blank"> | מדיניות הפרטיות ומדיניות העוגיות של החברה </a>
+						</div>
+						<div class="upper__form__check--icon">
+							<span class="check"><i class="fa-solid fa-check"></i></span>
+						</div>
+					</div>
+
+					<div class="upper__form--send">
+						<input class="upper__form__send--input" type="submit" name="send" value="צור קשר"/>
+					</div>
+
+					<input type="hidden" name="Zip" class="Zip" value="<%=zip%>"/>
+					<input type="hidden" name="afid" class="afid" value="<%=afid%>"/>
+
+				</form>
+				<a href="" class="btn-a-1" target="_blank">לפתיחת חשבון דמו</a>
+			</div>
+			<div class="upper__tell">
+				<div class="upper__tell--text">
+					<p>לשיחה או התייעצות</p>
+				</div>
+				<div class="upper__tell--num">
+					<a href="0723713479">072-3713479</a>
+				</div>
+			</div>
+			<div class="upper__text">
+				<div class="upper__text--logo"><span><img src="assets/img/logo.png" alt=""></span></div>
+				<div class="upper__text__wrap">
+					<div class="upper__text__wrap--el1"></div>
+					<div class="upper__text__wrap--el2">
+						<span>
+							<h1>התחילו לסחור עם<br/>זירת המסחר<br/>המובילה בישראל</h1>
+							<p>מסחר ב-CFD<br/>על סחורות, מדדים, צמדי מט"ח ומניות<br/>במערכת אחת.</p>
+						</span>
+					</div>
+					<div class="upper__text__wrap--el3"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="why-us">
+		<div class="why-us__bg"></div>
+		<div class="why-us__wrap">
+			<h2>
+				קולמקס מאפשרת לך לסחור במגוון<br/>
+				מכשירים פיננסים, וזאת
+				<span>
                 בפיקוח הרשות <br/>
                  לניירות ערך
             </span>
-        </h2>
-        <div class="why-us__blocks">
-            <div class="why-us__block">
-                <div class="why-us__block--img">
-                    <img src="assets/img/why-us/worldwide-1.png" alt="">
-                </div>
-                <h3>מסחר ממונף</h3>
-                <p>על מט”ח, סחורות, מדדים,  מניות אמריקאית, ת”א 35 ועוד</p>
-            </div>
-            <div class="why-us__block">
-                <div class="why-us__block--img">
-                    <img src="assets/img/why-us/frame-48.png" alt="">
-                </div>
-                <h3>מינימום הפקדה - $1,000</h3>
-            </div>
-            <div class="why-us__block">
-                <div class="why-us__block--img">
-                    <img src="assets/img/why-us/iskaot_Icon.png" alt="">
-                </div>
-                <h3>עסקאות שורט</h3>
-                <p>להפיק את המיטב  גם כשהשוק בירידה</p>
-            </div>
-        </div>
-    </section>
+			</h2>
+			<div class="why-us__blocks">
+				<div class="why-us__block">
+					<div class="why-us__block--img">
+						<img src="assets/img/why-us/worldwide-1.png" alt="">
+					</div>
+					<h3>מסחר ממונף</h3>
+					<p>על מט”ח, סחורות, מדדים, מניות אמריקאית, ת”א 35 ועוד</p>
+				</div>
+				<div class="why-us__block">
+					<div class="why-us__block--img">
+						<img src="assets/img/why-us/frame-48.png" alt="">
+					</div>
+					<h3>מינימום הפקדה - $1,000</h3>
+				</div>
+				<div class="why-us__block">
+					<div class="why-us__block--img">
+						<img src="assets/img/why-us/iskaot_Icon.png" alt="">
+					</div>
+					<h3>עסקאות שורט</h3>
+					<p>להפיק את המיטב גם כשהשוק בירידה</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <section class="stages">
-        <div class="stages__block">
-            <div class="stages__block--img">
-                <img src="assets/img/stages/Savings_Icon.png" alt="">
-            </div>
-            <p>
-                חיסכון בעמלות
-            </p>
-        </div>
-        <div class="stages__block">
-            <div class="stages__block--img">
-                <img src="assets/img/stages/Savings_Icon.png" alt="">
-            </div>
-            <p>
-                מדריכים וליווי –<br/>
-                אנחנו איתך לכל הדרך
-            </p>
-        </div>
-        <div class="stages__block">
-            <div class="stages__block--img">
-                <img src="assets/img/stages/Savings_Icon.png" alt="">
-            </div>
-            <p>
-                אפליקציה נוחה –<br/>
-                לסחור מכל מקום
-            </p>
-        </div>
-        <div class="stages__block">
-            <div class="stages__block--img">
-                <img src="assets/img/stages/Savings_Icon.png" alt="">
-            </div>
-            <p>
-                בפיקוח הרשות<br/>
-                לניירות ערך (ני”ע)
-            </p>
-        </div>
-    </section>
+	<section class="stages">
+		<div class="stages__block">
+			<div class="stages__block--img">
+				<img src="assets/img/stages/Savings_Icon.png" alt="">
+			</div>
+			<p>
+				חיסכון בעמלות
+			</p>
+		</div>
+		<div class="stages__block">
+			<div class="stages__block--img">
+				<img src="assets/img/stages/Savings_Icon.png" alt="">
+			</div>
+			<p>
+				מדריכים וליווי –<br/>
+				אנחנו איתך לכל הדרך
+			</p>
+		</div>
+		<div class="stages__block">
+			<div class="stages__block--img">
+				<img src="assets/img/stages/Savings_Icon.png" alt="">
+			</div>
+			<p>
+				אפליקציה נוחה –<br/>
+				לסחור מכל מקום
+			</p>
+		</div>
+		<div class="stages__block">
+			<div class="stages__block--img">
+				<img src="assets/img/stages/Savings_Icon.png" alt="">
+			</div>
+			<p>
+				בפיקוח הרשות<br/>
+				לניירות ערך (ני”ע)
+			</p>
+		</div>
+	</section>
 
-    <section class="faq">
+	<section class="faq">
+		<div class="faq__block">
+			<div class="faq__block__question">
+				<p>מהו חשבון דמו</p><span><i class="fa-solid fa-plus"></i></span>
+			</div>
+			<div class="faq__block__answer">
+				<p>
+					הדרך הטובה ביותר לסוחר המתחיל לעשות את צעדיו הראשונים בעולם המסחר היא פתיחת חשבון דמו להתנסות
+					בפלטפורמת המסחר. חשבון הדמו ניתן כחלק מהשירות של קולמקס ללקוחותיה ואינו כולל עלויות או התחייבות
+					כלשהן.
+				</p>
+				<p>
+					כניסה לכל תחום פיננסי חדש מלווה בחששות וחוסר וודאות מצד הסוחרים החדשים, גם מי שלמד ובקיא בתיאוריה של
+					עולם המסחר זקוק להכנה וללמידת התנהגות המערכת בפועל לפני תחילת המסחר האמיתי. חשבון דמו הוא המקום
+					האידיאלי ללחוץ על כל הכפתורים, להתנסות, לראות מה קורה בכל פעולה, להבין איפה כל נתון נמצא ועוד.
+				</p>
+			</div>
+		</div>
+		<div class="faq__block">
+			<div class="faq__block__question">
+				<p>היתרונות של חשבון דמו</p><span><i class="fa-solid fa-plus"></i></span>
+			</div>
+			<div class="faq__block__answer">
+				<p>
+					המטרה המרכזית של פתיחת חשבון דמו חינם היא לתת לסוחרים מתחילים וגם לסוחרים מנוסים שרוצים לנסות
+					אסטרטגיות חדשות, דרך לצבור ביטחון ומיומנות מסחר בלי לסכן בפועל כסף אמיתי. חשבון דמו הוא כלי יעיל
+					מאוד כי הוא מספק נתוני ופעולות מסחר בדיוק כמו בחשבון אמיתי, כולל רמות מינוף רלבנטיות, אלא שאין כאן
+					כל סיכון עבור הסוחר כי מדובר על כסף וירטואלי. חשבון דמו מתנהל מחוץ לשוק בצורה מלאה ורק מתבסס על
+					נתוני השוק. אי אפשר להפסיד אפילו שקל אחד בחשבון דמו וכמובן שגם אי אפשר להרוויח שקל אחד.
+				</p>
+			</div>
+		</div>
+		<div class="faq__block">
+			<div class="faq__block__question">
+				<p>מהו מסחר במטבע חוץ (FOREX)?</p><span><i class="fa-solid fa-plus"></i></span>
+			</div>
+			<div class="faq__block__answer">
+				<p>
+					מסחר בשוק המט”ח הינו ביצוע עסקאות קניה או מכירה על צמדי מטבעות שונים. מאחר והמסחר מתנהל על צמדים,
+					אזי עסקה בשוק המט”ח הינה קניית מטבע מסויים ובו זמנית מכירה של המטבע האחר. למשל: עסקה על צמד המטבעות
+					דולר/שקל, סוחר המט”ח בעסקה זו קונה דולרים ומוכר שקלים או הפוך.
+				</p>
+			</div>
+		</div>
+		<div class="faq__block">
+			<div class="faq__block__question">
+				<p>מדוע לבחור במסחר בפורקס</p><span><i class="fa-solid fa-plus"></i></span>
+			</div>
+			<div class="faq__block__answer">
+				<p>
+					שוק המט”ח הפך להיות השוק הפיננסי הגדול ביותר בעולם, עם שווי עסקאות של מעל 4 טריליון דולר הנסחרים כל
+					יום. שלא כמו שווקים פיננסיים אחרים, לשוק המט”ח אין כל מיקום פיזי ואין חליפין מרכזי. הוא פועל באמצעות
+					רשת גלובלית של בנקים, תאגידים ואנשים עצמאיים הסוחר במטבע אחד עבור מטבע אחר. אי-קיומו של חליפין פיזי
+					מאפשר לשוק המט”ח לפעול על בסיס של 24 שעות ביממה, כאשר הוא משתרע מאזור אחד למשנהו ומתרחש בכל המרכזים
+					הפיננסיים העיקריים בעולם.
+				</p>
+				<p>
+					המסחר במט”ח מאופיין בתנודתיות רבה ומושפע מאירועים גלובליים, פוליטיים, כלכליים וחברתיים. שוק המט”ח
+					טומן בחובו הזדמנויות רבות אך גם סיכון לא מועט. הוא מתאים מצד אחד לסוחרים תוך יומיים, אוהבי סיכון
+					ומצד שני מאפשר ביצוע עסקאות גידור והגנה מפני חשיפות מטבעיות לבעלי עסקים שונאי סיכון, החשופים מטבעית.
+				</p>
+			</div>
+		</div>
+	</section>
 
-    </section>
+	<div class="people">
+		<div class="people__text">
+			<div class="people__text--wrap">
+				<h1>התחילו לסחור עם<br/>זירת המסחר<br/>המובילה בישראל</h1>
+				<p>מסחר ב-CFD<br/>על סחורות, מדדים, צמדי מט"ח ומניות<br/>במערכת אחת.</p>
+			</div>
+		</div>
+		<div class="people__img">
+			<img src="assets/img/people1.png" alt="">
+		</div>
+	</div>
 
 </div>
 <footer>
-    @@include('html/footer.html',{})
+	@@include('html/footer.html',{})
 </footer>
 @@include('html/scripts.html',{})
-
 </body>
 </html>

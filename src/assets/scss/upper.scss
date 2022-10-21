@@ -1,0 +1,283 @@
+@import "virable/main_var";
+@import "mixins/main_mixins";
+@import "libre/media";
+@import "libre/main_libre";
+
+.upper {
+  padding: 130px 0 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__wrap {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: $color-second;
+    max-width: $size-main;
+    @include _lg {
+      flex-direction: column;
+      padding: 0 50px;
+    }
+  }
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include _lg {
+      order: 3;
+      top: -$size-border_1;
+    }
+    a {
+      color: $color-second;
+    }
+    .form-border-ok {
+      border: 1px solid #ffffff;
+    }
+    form {
+      width: 440px;
+      height: 100%;
+      padding: 50px 50px 0 50px;
+      background-color: rgba(232, 232, 232, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      @include _lg {
+        padding: 50px;
+        width: 100%;
+      }
+    }
+    &--input {
+      width: 100%;
+      padding: 0 5%;
+      background-color: rgba(232, 232, 232, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      input {
+        width: 100%;
+        color: $color-second;
+        height: 40px;
+        &::placeholder {
+          color: $color-second;
+        }
+      }
+    }
+    &--send {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      input {
+        width: 100%;
+        padding: 12px 0;
+        cursor: pointer;
+        background-color: $color-button-2;
+        font-size: 17px;
+        font-weight: 700;
+        @include _lg {
+          margin-top: 50px;
+        }
+      }
+    }
+    &__check {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      .check {
+        background-color: $color-check-bg;
+      }
+      .no-check {
+        background-color: $color-nocheck-bg;
+      }
+      span {
+        cursor: pointer;
+      }
+      &--icon {
+        padding-left: 20px;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          padding: 4px;
+          i {
+            color: #ffffff;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    &__list {
+      &--wrap {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+      }
+      &--arrow {
+        margin-top: 10px;
+        margin-right: 7px;
+        border: 8px solid transparent;
+        border-top: 10px solid $color-main;
+      }
+      &--text {
+        position: relative;
+        img {
+          position: absolute;
+          height: 80%;
+          top: 14%;
+          margin-left: 5px;
+        }
+        p {
+          outline: none;
+          user-select:none;
+        }
+      }
+    }
+    &__listAll {
+      position: relative;
+      width: 100%;
+      height: 1px;
+      padding: 0;
+      top: -20px;
+      &--closed {
+        display: none;
+      }
+      &--wrap {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color-list-bg;
+        border-radius: 0 0 5px 5px;
+        border: 1px solid #ffffff;
+        border-top: none;
+      }
+      ul {
+        position: relative;
+        li {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 40px;
+          left: 0;
+          padding-left: 40px;
+          cursor: pointer;
+          border-bottom: 1px solid #ffffff;
+          &:last-child {
+            border: none;
+          }
+          img {
+            position: absolute;
+            height: 42%;
+            top: 30%;
+            left: 72px;
+            margin-left: 5px;
+          }
+          span {
+            display: block;
+            position: relative;
+            left: 35px;
+          }
+        }
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include _lg {
+      align-items: center;
+      order: 1;
+    }
+    &--logo {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      span {
+        display: block;
+        width: 138px;
+        height: 32px;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__wrap {
+      width: 100%;
+      &--el1 {
+        border: $size-border_1 solid $color-second;
+        border-bottom: none;
+        min-height: 70px;
+      }
+      &--el3 {
+        border: $size-border_1 solid $color-second;
+        border-top: none;
+        min-height: 70px;
+      }
+      &--el2 {
+        width: 525px;
+        border-left: $size-border_1 solid $color-second;
+        text-align: right;
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include _lg {
+          width: 100%;
+          height: auto;
+          min-height: 400px;
+        }
+        &> span {
+          display: block;
+          position: relative;
+          left: 20px;
+          top: -8px;
+          h1 {
+            font-size: $size-title_1;
+            font-weight: 600;
+            line-height: 55px;
+          }
+          p {
+            margin-top: 20px;
+            font-size: $size-title_1_2;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  &__tell {
+    display: none;
+    @include _lg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 15px 0;
+      order: 2;
+      color: $color-main;
+      background-color: $color-second;
+      position: relative;
+      top: -$size-border_1;
+    }
+    a {
+      font-size: 34px;
+      color: $color-red;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+}

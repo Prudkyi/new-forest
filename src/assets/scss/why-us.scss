@@ -1,0 +1,37 @@
+@import "virable/main_var";
+@import "mixins/main_mixins";
+@import "libre/media";
+@import "libre/main_libre";
+
+.why-us {
+  &__wrap {
+    padding: 100px 0;
+    position: relative;
+    top: -150px;
+    height: 500px;
+    background: rgb(19,29,39);
+    background: linear-gradient(200deg, rgba(19,29,39,1) 54%, rgba(22,37,56,1) 65%, rgba(27,48,75,1) 87%);
+  }
+   &__bg {
+     position: relative;
+     top: -150px;
+     width: 100%;
+     height: 200px;
+     background: rgb(19,29,39);
+     background: linear-gradient(0deg, rgba(19,29,39,1) 0%, rgba(19,29,39,1) 33%, rgba(19,29,39,0.8) 56%, rgba(19,29,39,0.6) 72%, rgba(19,29,39,0.4) 83%, rgba(19,29,39,0.2) 91%, rgba(19,29,39,0) 100%);
+
+   }
+  h2 {
+    text-align: center;
+  }
+  &__blocks {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: $size-main;
+    outline: 1px solid red;
+  }
+  &__block {
+
+  }
+}

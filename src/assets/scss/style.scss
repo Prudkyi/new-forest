@@ -4,3 +4,33 @@
 //@import "fonts";
 @import "libre/media";
 @import "libre/main_libre";
+
+/* main */
+#main {
+  overflow: hidden;
+  margin: 0 auto;
+  font-family: $font-main;
+  font-size: 16px;
+}
+
+/* buttons */
+
+.btn-a-1 {
+  width: 440px;
+  padding: 12px 0;
+  cursor: pointer;
+  background-color: $color-button;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: $color-second;
+  font-size: 25px;
+  font-weight: 600;
+  @include _md {
+    width: 100%;
+  }
+}
+
+/* blocks */
+@import "upper";
+@import "why-us";
