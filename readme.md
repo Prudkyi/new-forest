@@ -1,6 +1,6 @@
 Для роботи виконайте наступні кроки:
-1. Встановіть Node.js на ПК (якщо він ще не встановлений) - [https://nodejs.org/en/](https://nodejs.org/en/)
-2. Виконайте в терміналі команду - node init
+1. Встановіть Node.js на ПК (якщо він ще не встановлений) - [https://nodejs.org/en/](https://nodejs.org/en/). Виконайте в терміналі команду - node init
+2. Виконайте в терміналі команду - npm i
 3. Дочекайтесь закінчення встановлення пакетів
 
 Для запуску роботи в режимі **розробки** виконайте команду
@@ -15,8 +15,8 @@
 
 To work, follow these steps:
 
-1. Install Node.js on PC (if not already installed) - [https://nodejs.org/en/](https://nodejs.org/en/)
-2. Execute the command - node init in the terminal
+1. Install Node.js on PC (if not already installed) - [https://nodejs.org/en/](https://nodejs.org/en/). Execute the command - "node init" in the terminal
+2. Execute the command - "npm i" in the terminal
 3. Wait for the package installation to finish
 
 To start work in **development** mode, execute the command
