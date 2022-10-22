@@ -44,63 +44,7 @@ for (let elem of elP) {
 
 /* END changes in direction */
 
-/* list country */
 $(document).ready(function() {
-
-let butListCountry = $('#form_1'),
-    butListCountry2 = $('#form_2'),
-    listCountry = $('#form_list_1'),
-    listCountry2 = $('#form_list_2'),
-    listCountryOpen = false,
-    listCountryOpen2 = false;
-
-    let listCountryAll_1 = $('.upper__form__listAll--wrap li');
-    let listCountryAll_2 = $('.footer__form__listAll--wrap li');
-
-    butListCountry.on("click", function (){
-        if (!listCountryOpen && listCountryAll_1.length > 1){
-            listCountryOpen = true;
-            listCountry.removeClass("upper__form__listAll--closed");
-        }
-        else {
-            listCountryOpen = false;
-            listCountry.addClass("upper__form__listAll--closed");
-        }
-    });
-
-    butListCountry2.on("click", function (){
-        if (!listCountryOpen && listCountryAll_2.length > 1){
-            listCountryOpen2 = true;
-            listCountry2.removeClass("footer__form__listAll--closed");
-        }
-        else {
-            listCountryOpen2 = false;
-            listCountry2.addClass("footer__form__listAll--closed");
-        }
-    });
-
-    let listCountryElement = $('.upper__form__listAll--wrap li');
-    let listCountryElement2 = $('.footer__form__listAll--wrap li');
-
-    listCountryElement.on("click", function (){
-        let thisText = $(this).find('p').text();
-        let src = $(this).find('img').attr('src');
-        let newStr = '<p dir="rtl">'+thisText+'</p><img src="'+src+'" alt="Izrail">';
-        $('.upper__form__list--text').html(newStr);
-        listCountryOpen = false;
-        listCountry.addClass("upper__form__listAll--closed");
-    });
-
-    listCountryElement2.on("click", function (){
-        let thisText = $(this).find('p').text();
-        let src = $(this).find('img').attr('src');
-        let newStr = '<p dir="rtl">'+thisText+'</p><img src="'+src+'" alt="Izrail">';
-        $('.footer__form__list--text').html(newStr);
-        listCountryOpen2 = false;
-        listCountry2.addClass("footer__form__listAll--closed");
-    });
-
-/* END list county */
 
     /* faq */
 
@@ -184,17 +128,40 @@ let butListCountry = $('#form_1'),
         for (let i = 0; i < elements.length; i++)
         {
             let valID = elements[i].getAttribute('data-input');
-            if (elements[i].value !== '')
-            {
+
                 let valEl = elements[i].value;
+
+                // name
+                if (valID === 'name')
+                {
+                    let nameVal = $(checkInput+"[name="+valID+"]").val();
+                    if (nameVal.length < 2 || nameVal == "שם") {
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').removeClass('form-border-ok');
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').addClass('form-border-nok');
+                        alert("אנא מלא את שדה השם");
+                        $(checkInput+"[name="+valID+"]").focus();
+                        resCheck = false;
+                    }
+                    else {
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').removeClass('form-border-nok');
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').addClass('form-border-ok');
+                    }
+                }
                 // tell
                 if (valID === 'phone')
                 {
-                    if (valEl.length < 9)
+                    let phoneVal = $(checkInput+"[name="+valID+"]").val();
+                    if (phoneVal == null || phoneVal.length < 9 || phoneVal.length > 11 || phoneVal.charAt(0) != 0)
                     {
                         $(checkInput+"[name="+valID+"]").parent('.wrapInput').removeClass('form-border-ok');
                         $(checkInput+"[name="+valID+"]").parent('.wrapInput').addClass('form-border-nok');
+                        alert("אנא הזן מספר טלפון");
+                        if (resCheck)  $(checkInput+"[name="+valID+"]").focus();
                         resCheck = false;
+                    }
+                    else {
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').removeClass('form-border-nok');
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').addClass('form-border-ok');
                     }
                 }
                 // email
@@ -204,32 +171,42 @@ let butListCountry = $('#form_1'),
                     {
                         $(checkInput+"[name="+valID+"]").parent('.wrapInput').removeClass('form-border-ok');
                         $(checkInput+"[name="+valID+"]").parent('.wrapInput').addClass('form-border-nok');
+                        alert('אנא הכנס אי מייל תקין');
+                        if (resCheck) $(checkInput+"[name="+valID+"]").focus;
                         resCheck = false;
                     }
+                    else {
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').removeClass('form-border-nok');
+                        $(checkInput+"[name="+valID+"]").parent('.wrapInput').addClass('form-border-ok');
+                    }
                 }
-            }
-            else {
-                console.log(valID)
-                $(checkInput+"[name="+valID+"]").parent('.wrapInput').removeClass('form-border-ok');
-                $(checkInput+"[name="+valID+"]").parent('.wrapInput').addClass('form-border-nok');
-                resCheck = false;
-            }
+
         }
         return resCheck;
     }
 
     form_but_1.on("click", function (){
         let resCheck = checkInputsData('.checkInput_1');
-        if (resCheck && checkForm_1){
-            $('#form_01')[0].submit();
+        let resInput1 = false;
+        let resCheck1 = false;
+        if (resCheck) resInput1 = true;
+        if (checkForm_1) resCheck1 = true;
+        else {
+            $('.checkInput_el_1').addClass('form-border-nok');
         }
+        if (resInput1 && resCheck1) $('#form_01')[0].submit();
     })
 
     form_but_2.on("click", function (){
         let resCheck = checkInputsData('.checkInput_2');
-        if (resCheck && checkForm_2){
-            $('#form_02')[0].submit();
+        let resInput2 = false;
+        let resCheck2 = false;
+        if (resCheck) resInput2 = true;
+        if (checkForm_2) resCheck2 = true;
+        else {
+            $('.checkInput_el_2').addClass('form-border-nok');
         }
+        if (resInput2 && resCheck2) $('#form_01')[0].submit();
     })
 
     checkInput_1.on("click", function (){
@@ -246,6 +223,7 @@ let butListCountry = $('#form_1'),
             checkInput_el_1.addClass("check");
             $(this).find('i').css('opacity', '1');
             checkForm_1 = true;
+            $(this).removeClass('form-border-nok');
         }
     });
 
@@ -263,12 +241,15 @@ let butListCountry = $('#form_1'),
             checkInput_el_2.addClass("check");
             $(this).find('i').css('opacity', '1');
             checkForm_2 = true;
+            $(this).removeClass('form-border-nok');
         }
     });
 
     /* END Check Form */
 
 });
+
+
 
 
 
