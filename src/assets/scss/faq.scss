@@ -1,0 +1,51 @@
+@import "virable/main_var";
+@import "mixins/main_mixins";
+@import "libre/media";
+@import "libre/main_libre";
+
+.faq {
+  background-color: $color-grey;
+  padding: 60px 0 80px;
+  &__wrap {
+    max-width: $size-main;
+    margin: 0 auto;
+    padding: 0 45px;
+    @include _lg {
+      padding: 0 50px;
+    }
+  }
+  &__block {
+    border-bottom: 1px solid $color-main;
+    &__question {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 60px;
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      &:hover i {
+        color: #000000;
+        font-size: 21px;
+      }
+      span {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          font-size: 20px;
+          color: $color-main;
+        }
+      }
+    }
+    &__answer {
+      display: none;
+      padding-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+}

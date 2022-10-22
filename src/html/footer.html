@@ -1,55 +1,100 @@
-<div class="footer">
-	<div class="footer__form">
-		<form action="#" method="post" name="send" onsubmit="return Validate()">
-
-			<div class="upper__form--input">
-				<input id="name" placeholder="שם" name="name" class="field" type="text" dir="rtl"/>
-			</div>
-
-			<div class="upper__form--input">
-				<input id="phone" placeholder="טלפון" name="phone" class="field" type="phone" dir="rtl"/>
-			</div>
-
-			<div class="upper__form--input">
-				<input id="email" placeholder="אימייל" name="email" class="field" type="email" dir="rtl"/>
-			</div>
-
-			<input type="hidden" name="Zip" id="Zip" value="<%=zip%>"/>
-			<input type="hidden" name="afid" id="afid" value="<%=afid%>"/>
-			<div class="upper__form__check">
-				<div class="upper__form__check--text">
-					<span>אני מסכים לקבל חומר פרסומי מעת לעת. הנני מצהיר בזאת כי קראתי, הבנתי וקיבלתי את . </span>
-					<a href="" target="_blank"> תנאי השימוש </a>
-					<a href="" target="_blank"> | מדיניות הפרטיות ומדיניות העוגיות של החברה </a>
+<div class="footer" style="background-image: url(assets/img/bottom-fon.jpg)">
+	<div class="footer__wrap">
+		<div class="footer__form">
+			<form action="finish.html" method="post" name="send"  id="form_02">
+				<div class="wrapInput footer__form--input form-border-ok">
+					<input class="checkInput_2" data-input="name" placeholder="שם" name="name" type="text"/>
 				</div>
-				<div class="upper__form__check--icon">
-					<span><i class="fa-duotone fa-check"></i></span>
+
+				<div class="wrapInput footer__form--input form-border-ok">
+					<div class="footer__form__list" id="form_2">
+						<div class="footer__form__list--wrap">
+							<div class="footer__form__list--arrow"></div>
+							<div class="footer__form__list--text">
+								<p>+972</p><img src="assets/img/country/izrail.png" alt="Izrail">
+							</div>
+						</div>
+					</div>
+					<input class="checkInput_2" data-input="phone" placeholder="טלפון" name="phone" type="phone"/>
 				</div>
-			</div>
-			<input id="send" type="submit" name="send" value="צור קשר"/>
-		</form>
+
+				<div class="footer__form__listAll footer__form__listAll--closed" id="form_list_2">
+					<div class="footer__form__listAll--wrap">
+						<ul>
+							<li><p>+972</p><img src="assets/img/country/izrail.png" alt="Izrail"><span>Izrail</span>
+							</li>
+							<li><p>+480</p><img src="assets/img/country/ukraine.jpg"
+							                    alt="Ukraine"><span>Ukraine</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="wrapInput footer__form--input form-border-ok">
+					<input class="checkInput_2" data-input="email" placeholder="אימייל" name="email" type="email"/>
+				</div>
+
+				<div class="footer__form__check">
+					<div class="footer__form__check--text" dir="rtl">
+						<span class="checkInput_2-check">אני מסכים לקבל חומר פרסומי מעת לעת. הנני מצהיר בזאת כי קראתי, הבנתי וקיבלתי את . </span>
+						<a href="" target="_blank"> תנאי השימוש </a>
+						<a href="" target="_blank"> | מדיניות הפרטיות ומדיניות העוגיות של החברה </a>
+					</div>
+					<div class="footer__form__check--icon">
+						<span class="check checkInput_2-check checkInput_el_2" data-input="check"><i class="fa-solid fa-check"></i></span>
+					</div>
+				</div>
+
+				<div class="footer__form--send" id="form_but_2">
+					<input class="upper__form__send--input" type="button" name="send" value="צור קשר"/>
+				</div>
+
+				<input type="hidden" name="Zip" class="Zip" value="<%=zip%>"/>
+				<input type="hidden" name="afid" class="afid" value="<%=afid%>"/>
+
+			</form>
+		</div>
 		<div class="footer__tell">
-			<p>לשיחה או התייעצות</p>
-			<a href="tel:0732580093">073-2580093</a>
+			<div class="footer__tell--text">
+				<p>לשיחה או התייעצות</p>
+			</div>
+			<div class="footer__tell--num">
+				<a href="0723713479">072-3713479</a>
+			</div>
+		</div>
+		<div class="footer__text">
+			<div class="footer__text__wrap">
+				<div class="footer__text__wrap--el2">
+						<span>
+							<h3>
+								הירשם לחשבון הדמו<br/>
+ותוכל להתחיל להתאמן עוד היום
+							</h3>
+						</span>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="footer__text">
-		<p>
-			הירשם לחשבון הדמו<br/>
-			ותוכל להתחיל להתאמן עוד היום
-		</p>
-	</div>
 </div>
+
 <div class="cookie">
-	<div class="cookie__open">
-		<p> לחץ לפתיחה</p><i class="fa-solid fa-plus"></i>
-	</div>
-	<div class="cookie__close">
-		<p> לחץ לסגירה</p><i class="fa-solid fa-plus"></i>
-	</div>
-	<div class="cookie__mess">
-		<p>
-			המסחר במט”ח מאופיין בתנודתיות רבה ומושפע מאירועים גלובליים, פוליטיים, כלכליים וחברתיים. שוק המט”ח טומן בחובו הזדמנויות רבות אך גם סיכון לא מועט. הוא מתאים מצד אחד לסוחרים תוך יומיים, אוהבי סיכון ומצד שני מאפשר ביצוע עסקאות גידור והגנה מפני חשיפות מטבעיות לבעלי עסקים שונאי סיכון, החשופים מטבעית.
-		</p>
+	<div class="cookie__wrap">
+		<div class="cookie__button">
+		<span class="cookie__open">
+			<p> לחץ לפתיחה</p><i class="fa-solid fa-plus"></i>
+		</span>
+		<span class="cookie__close">
+			<p> לחץ לסגירה</p><i class="fa-solid fa-plus"></i>
+		</span>
+		</div>
+		<div class="cookie__mess">
+			<p>
+				אין באישור שנותנת רשות ניירות ערך לניהול הזירה אישור לטיב המסחר בזירה או במכשירים הפיננסיים הנסחרים
+				בזירה, או אישור כי מדובר באפיק השקעה בטוח או מומלץ | הפעילות בזירה דורשת מיומנות, ידע והבנת הסיכונים
+				ואינה מתאימה לכל אדם | פעילות ממונפת כרוכה בסיכון ממשי של אבדן מלוא כספי ההשקעה בתוך זמן קצר | החברה
+				המפעילה זירה זו פועלת כצד נגדי לעסקאות איתך, ולכן היא המוכרת כשאתה קונה והיא הקונה כשאתה מוכר;
+			</p>
+		</div>
 	</div>
 </div>
+
+<div class="footer__mask"></div>
